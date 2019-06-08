@@ -9,7 +9,7 @@ using System.Collections;
  *	Bulletクラスを持った GameObject が接触すると破壊される
  *	すべてのターゲットが破壊されるとステージクリアとする
  */
-public		class		Target				: MonoBehaviour {
+public class Target				: MonoBehaviour {
 	
 	
 	

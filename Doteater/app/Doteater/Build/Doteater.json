@@ -1,0 +1,9 @@
+{
+"TOTAL_MEMORY": 268435456,
+"dataUrl": "Doteater.data.unityweb",
+"asmCodeUrl": "Doteater.asm.code.unityweb",
+"asmMemoryUrl": "Doteater.asm.memory.unityweb",
+"asmFrameworkUrl": "Doteater.asm.framework.unityweb",
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20"
+}

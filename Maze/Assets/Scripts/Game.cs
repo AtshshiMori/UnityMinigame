@@ -8,7 +8,7 @@ using System.Collections;
  *	ゲームの情報を管理するクラス
  *	Maruchu
  */
-public		class		Game				: MonoBehaviour {
+public class Game				: MonoBehaviour {
 	
 	
 	

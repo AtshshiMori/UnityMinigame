@@ -8,7 +8,7 @@ using System.Collections;
  *
  *	Playerクラスを持った GameObject が接触するとステージクリアになる
  */
-public		class		Goal				: MonoBehaviour {
+public class Goal				: MonoBehaviour {
 	
 	
 	

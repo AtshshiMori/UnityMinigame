@@ -8,7 +8,7 @@ using System.Collections;
  *	汎用のくるくる回るオブジェクト用スクリプト
  *	Maruchu
  */
-public		class		Round				: MonoBehaviour {
+public class Round				: MonoBehaviour {
 
 
 

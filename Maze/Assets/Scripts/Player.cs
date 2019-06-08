@@ -10,26 +10,24 @@ using System.Collections;
  *
  *	キャラクターの移動、メカニム(モーション)の制御など
  */
-public		class		Player				: MonoBehaviour {
+public class Player	: MonoBehaviour {
+	
+	public GameObject	playerObject			= null;		//動かす対象のモデル
+	public GameObject	bulletObject			= null;		//弾プレハブ
+	
+	public Transform	bulletStartPosition		= null;		//弾の発射位置を取得するボーン
 	
 	
 	
-	public							GameObject	playerObject			= null;		//動かす対象のモデル
-	public							GameObject	bulletObject			= null;		//弾プレハブ
+	private		static readonly	float	MOVE_Z_FRONT			=  5.0f;	//前進の速度
+	private		static readonly	float	MOVE_Z_BACK				= -2.0f;	//後退の速度
 	
-	public							Transform	bulletStartPosition		= null;		//弾の発射位置を取得するボーン
+	private		static readonly	float	ROTATION_Y_KEY			= 360.0f;	//回転の速度(キーボード)
+	private		static readonly	float	ROTATION_Y_MOUSE		= 720.0f;	//回転の速度(マウス)
 	
+	private   float		m_rotationY				= 0.0f;		//プレーヤーの回転角度
 	
-	
-	private		static readonly		float		MOVE_Z_FRONT			=  5.0f;	//前進の速度
-	private		static readonly		float		MOVE_Z_BACK				= -2.0f;	//後退の速度
-	
-	private		static readonly		float		ROTATION_Y_KEY			= 360.0f;	//回転の速度(キーボード)
-	private		static readonly		float		ROTATION_Y_MOUSE		= 720.0f;	//回転の速度(マウス)
-	
-	private							float		m_rotationY				= 0.0f;		//プレーヤーの回転角度
-	
-	private							bool		m_mouseLockFlag			= true;		//マウスを固定する機能
+	private   bool		m_mouseLockFlag			= true;		//マウスを固定する機能
 	
 	
 	
@@ -77,23 +75,23 @@ public		class		Player				: MonoBehaviour {
 	/*
  *	移動処理のチェック
  */
-	private		void	CheckMove() {
+	private	void CheckMove() {
 		
 		//回転
 		{
 			//キー操作による回転
 			float	addRotationY	= 0.0f;
 			if( Input.GetKey( KeyCode.Q)) {
-				addRotationY		= -ROTATION_Y_KEY;
+				addRotationY = -ROTATION_Y_KEY;
 			} else
 			if( Input.GetKey( KeyCode.E)) {
-				addRotationY		=  ROTATION_Y_KEY;
+				addRotationY =  ROTATION_Y_KEY;
 			}
 			
 			//マウスの移動量による回転
 			if( m_mouseLockFlag) {
 				//移動量を取得して角度に渡す
-				addRotationY		+= (Input.GetAxis( "Mouse X")	*ROTATION_Y_MOUSE);
+				addRotationY += (Input.GetAxis( "Mouse X")	*ROTATION_Y_MOUSE);
 			}
 			
 			//現在の角度に加算

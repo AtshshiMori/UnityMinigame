@@ -8,7 +8,7 @@ using System.Collections;
  *
  *	何でもいいので接触したらエフェクトを出して消える
  */
-public		class		Bullet				: MonoBehaviour {
+public class Bullet				: MonoBehaviour {
 	
 	
 	

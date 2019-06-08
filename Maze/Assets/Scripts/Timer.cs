@@ -8,7 +8,7 @@ using System.Collections;
  *	汎用の時間で消えるオブジェクト用スクリプト
  *	Maruchu
  */
-public		class		Timer				: MonoBehaviour {
+public class Timer				: MonoBehaviour {
 	
 	
 	
